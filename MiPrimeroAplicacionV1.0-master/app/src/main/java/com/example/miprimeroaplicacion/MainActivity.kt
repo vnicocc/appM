@@ -24,8 +24,8 @@ class MainActivity : AppCompatActivity() {
         val btnLogin: Button = findViewById(R.id.btn_login)
 
 
-        var defUsername = "Josepr"
-        var defPasswd = "jose123"
+        var defUsername = "Vicente"
+        var defPasswd = "vicho123"
 
 
         val btnApi: Button = findViewById(R.id.btn_api)
@@ -36,25 +36,18 @@ class MainActivity : AppCompatActivity() {
 
             if(edUsername.text.toString() == defUsername.toString() && edPassw.text.toString() == defPasswd.toString()){
 
-
-                val nuevaVentana = Intent(this, MainActivity2::class.java)
-
+                val nuevaVentana = Intent(this, MainActivity5::class.java)
 
                 nuevaVentana.putExtra("par_usern", edUsername.text.toString())
 
-
                 startActivity(nuevaVentana)
 
-
                 Toast.makeText(this, "Pasaste mi loco", Toast.LENGTH_SHORT).show()
-
 
             }else{
                 Toast.makeText(this, "Error: Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
 
-
             }
-
 
         }
 
